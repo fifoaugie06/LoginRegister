@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/bgkiriatas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bgkiriatas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/bgkananbawah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bgkananbawah"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/bgkananbawah"
+            app:layout_constraintTop_toBottomOf="@id/bgkiriatas">
+
+            <TextView
+                android:id="@+id/tv_Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvLogin"
+                android:textColor="#3B3B3B"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/parentedit"
+                android:layout_width="330dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/ic_field_loginstyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_Login">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toTopOf="@id/view"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ic_person"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_person_outline_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/edt_nim"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/nim"
+                        android:inputType="number"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="#535353"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#E4E4E4"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view">
+
+                    <ImageView
+                        android:id="@+id/ic_lock"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:src="@drawable/ic_lock_open_black_24dp" />
+
+                    <EditText
+                        android:id="@+id/edt_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="33dp"
+                        android:layout_marginStart="6dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="#535353"
+                        android:textSize="18sp" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageButton
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_buttonnext_style"
+                android:elevation="4dp"
+                android:padding="6dp"
+                android:src="@drawable/ic_arrow_forward_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/parentedit"
+                app:layout_constraintEnd_toEndOf="@+id/parentedit"
+                app:layout_constraintStart_toEndOf="@+id/parentedit"
+                app:layout_constraintTop_toTopOf="@+id/parentedit" />
+
+            <Button
+                android:id="@+id/btn_Register_Intent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/ic_field_loginstyle"
+                android:text="@string/tvRegister"
+                android:textAllCaps="false"
+                android:textColor="#E33238"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/parentedit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
