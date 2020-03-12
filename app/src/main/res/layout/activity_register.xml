@@ -60,7 +60,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/parentedit"
-                android:layout_width="330dp"
+                android:layout_width="0dp"
+                app:layout_constraintWidth_percent="0.7"
                 android:layout_height="240dp"
                 android:layout_marginTop="46dp"
                 android:background="@drawable/ic_field_loginstyle"
